@@ -1,8 +1,11 @@
 var apiReader = new function() {
-
-	var settings = {};
+	
+	var settings    = {};
+	var lastRequest = false;
+	var ctx         = this;
 
 	function doRequest(url, method, data, contentType, headers) {
+
 		settings = {
 		  url: url,
 		  data: data,
@@ -21,14 +24,33 @@ var apiReader = new function() {
 			settings['contentType'] = contentType;
 		}
 
-		return $.ajax().done(function() {
-		});
+		var response = $.extend($.ajax(settings), ctx);
+
+		return (lastRequest = response);
+	};
+
+	this.getResponse = function() {
+
+		var response = {'status' : 'error', 'message' : 'couldnt received data', 'data' : {}};
+		if (lastRequest) {
+
+
+		  if (lastRequest.readyState == 200) {
+		  	return {'status' : 'ok', 'messsage' : 'received data', 'data' : response.statusText}
+		  } else {
+		  	response['data'] = 'ajax error: '+lastRequest.statusText;
+
+		  	return response;
+		  }
+		}
+
+		return response;
 	};
 
 	this.setSettings = function setSettings(customSettings) {
-		settings = $.jquery(settings, customSettings);
+		settings = $.extend(settings, customSettings);
 
-		return true;
+		return this;
 	};
 
 	this.get = function get(url, data, contentType, headers) {
@@ -44,4 +66,3 @@ var apiReader = new function() {
 	};
 
 };
-
