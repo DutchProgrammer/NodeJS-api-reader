@@ -22,7 +22,6 @@ var apiReader = new function() {
 		}
 
 		return $.ajax().done(function() {
-		  $( this ).addClass( "done" );
 		});
 	};
 
@@ -44,5 +43,5 @@ var apiReader = new function() {
 		return doRequest(url, 'PUT', data, contentType, headers);
 	};
 
-});
+};
 
