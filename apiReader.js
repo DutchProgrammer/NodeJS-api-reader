@@ -11,7 +11,8 @@ var apiReader = new function() {
 		  data: data,
 		  async: false,
 		  method: method,
-		  cache: false
+		  cache: false,
+		  crossDomain: true
 		};
 
 		if (headers !== undefined && headers) {
