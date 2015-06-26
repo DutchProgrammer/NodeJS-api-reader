@@ -11,13 +11,13 @@ var apiReader = new function() {
 		  cache: false
 		};
 
-		if (headers !=== undefined && headers) {
+		if (headers !== undefined && headers) {
 			settings['headers'] = headers;
 		}
-		if (data !=== undefined && data) {
+		if (data !== undefined && data) {
 			settings['data'] = data;
 		}
-		if (contentType !=== undefined && contentType) {
+		if (contentType !== undefined && contentType) {
 			settings['contentType'] = contentType;
 		}
 
