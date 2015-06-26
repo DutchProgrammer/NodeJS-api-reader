@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-api-reader",
+  "version": "1.0.0",
+  "description": "simpel api url reader",
+  "main": "apiReader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DutchProgrammer/NodeJS-api-reader.git"
+  },
+  "keywords": [
+    "api",
+    "url",
+    "reader"
+  ],
+  "author": "Danny van der Knaap",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DutchProgrammer/NodeJS-api-reader/issues"
+  },
+  "homepage": "https://github.com/DutchProgrammer/NodeJS-api-reader#readme"
+}

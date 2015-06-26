@@ -1,0 +1,25 @@
+{
+  "name": "NodeJS-api-reader",
+  "version": "1.0.0",
+  "homepage": "https://github.com/DutchProgrammer/NodeJS-api-reader",
+  "authors": [
+    "DutchProgrammer <danny@dutchprogrammer.nl>"
+  ],
+  "description": "simpel api url  reader",
+  "main": "apiReader.js",
+  "keywords": [
+    "api",
+    "url",
+    "reader",
+    "and",
+    "parser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
