@@ -1,2 +1,2 @@
 # NodeJS-api-reader
-Easy create an API reader
+Easy API reader and parser
